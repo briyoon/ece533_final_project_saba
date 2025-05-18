@@ -1,0 +1,29 @@
+[project]
+name = "ece533_final_project_mccollum"
+version = "0.1.0"
+requires-python = "==3.12.*"
+
+dependencies = [
+    "numpy",
+    "scikit-learn",
+    "matplotlib",
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "albumentations",
+    "tqdm",
+    "pandas"
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu128", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu128", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]

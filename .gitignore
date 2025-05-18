@@ -1,0 +1,13 @@
+.vscode/
+
+.venv/
+__pycache__/
+
+data/
+runs/
+visualizations/
+enzo/
+datasets/
+
+*.csv
+*.sh
